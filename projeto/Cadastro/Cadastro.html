@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cadastro.css">
+    <title>Cadastro</title>
+</head>
+<center>
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+</center>
+
+<body>
+    <form class="cadastro">
+        <input class="nome" type="text" placeholder="Nome" required> <br>
+        <input class="email" type="text" placeholder="E-mail" required> <br>
+        <input class="cpf" type="text" placeholder="CPF" maxlength="11" required> <br>
+        <input id="cep" class="cep" type="text" placeholder="CEP" onblur="pesquisacep(this.value);" required> <br>
+        <input id="rua" class="endereco" type="text" placeholder="Endereço" required> <br>
+        <input id="bairro" class="bairro" type="text" placeholder="Bairro" required> <br>
+        <input id="cidade" class="cidade" type="text" placeholder="Cidade" required> <br>
+        <input id="uf" class="uf" type="text" placeholder="UF" maxlength="2" required> <br>
+        <input class="senha" type="password" placeholder="Senha" minlength="6" required> <br>
+        <input class="confirmacao" type="password" placeholder="Confirmar Senha" minlength="6" required> <br>
+        <button class="BTNcadastro" type="submit">Cadastrar-se</button> <br>
+    </form>
+
+    <Button onclick="window.location.href='../Login/Login.html'">Voltar</Button>
+</body>
+</center>
+<script src="Cadastro.js"></script>
+
+</html>
