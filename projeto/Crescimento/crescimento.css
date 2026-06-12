@@ -1,0 +1,180 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+h1{
+    color:#ffffff;
+    text-align:center;
+    }
+header{
+    background:#071b3b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.logo{
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:#2ecc71;
+}
+
+.btn-menu{
+    background:#2ecc71;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.hero{
+    background:#0b4d8c;
+    min-height:85vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:50px;
+}
+
+.texto{
+    max-width:600px;
+}
+
+.texto h1{
+    color:white;
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.texto p{
+    color:white;
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.btn-hero{
+    background:#2ecc71;
+    color:white;
+    border:none;
+    padding:18px 40px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.imagem img{
+    width:450px;
+}
+
+.sobre,
+.vantagens,
+.investimento{
+    background:white;
+    padding:60px;
+}
+
+h2{
+    color:#0b4d8c;
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.card{
+    background:#f0f0f0;
+    padding:25px;
+    border-radius:10px;
+    width:300px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#0b4d8c;
+    margin-bottom:10px;
+}
+
+ul{
+    margin-left:30px;
+}
+
+ul li{
+    font-size:20px;
+    margin-bottom:12px;
+}
+
+.investimento h3{
+    color:#2ecc71;
+    margin-top:15px;
+    font-size:30px;
+}
+
+footer{
+    background:#071b3b;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .texto h1{
+        font-size:45px;
+    }
+
+    .texto p{
+        font-size:20px;
+    }
+
+    .imagem img{
+        width:280px;
+        margin-top:30px;
+    }
+
+    nav{
+        display:none;
+    }
+}
+button{
+    background:#2ecc71;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:20px;
+}

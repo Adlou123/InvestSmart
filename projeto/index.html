@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="stylesheet" href="paginaprin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InvestSmart</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">InvestSmart</div>
+
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#economia">Economia</a></li>
+        <li><a href="#economia">Investimentos</a></li>
+        <li><a href="#simulador">Simulador</a></li>
+        <li><a href="#cta">Contato</a></li>
+      </ul>
+
+      <a href="Login/Login.html" class="btn">Login</a>
+    </nav>
+  </header>
+  <section class="banner">
+
+    <div class="texto">
+      <h1>Aprenda a cuidar do seu dinheiro.</h1>
+
+      <p>Dicas simples e práticas sobre economia e investimentos para iniciantes.</p>
+
+      <a href="saibaMais/saibaMais.html" class="btn">Saiba Mais</a>
+    </div>
+
+    <div class="imagem">
+      <img src="imagens/imagembanner.png" alt="Imagem de economia">
+    </div>
+  </section>
+  <section class="economia" id="economia">
+    <h2>O que é economia?</h2>
+
+    <p class="intro">
+      Economia é o estudo de como as pessoas usam o dinheiro e os recursos para
+      produzir, consumir e investir de forma inteligente.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>📈 Crescimento</h3>
+        <p>Entenda como a economia afeta o crescimento econômico.</p>
+        <a href="Crescimento/crescimento.html" class="btn">Saiba Mais</a>
+      </div>
+
+      <div class="card">
+        <h3>📊 Renda variável</h3>
+        <p>Opções como ações e fundos de investimento.</p>
+        <a href="RendaVariavel/renda-variavel.html" class="btn">Saiba Mais</a>
+      </div>
+
+      <div class="card">
+        <h3>💲 Criptomoedas</h3>
+        <p>invista em moedas digitais como bitcoin e ethereum.</p>
+        <a href="CriptoMoedas/criptomoedas.html" class="btn">Saiba Mais</a>
+      </div>
+
+      <div class="card">
+        <h3>💰 Renda fixa</h3>
+        <p>Opções como poupança, tesouro direto e CDBs.</p>
+        <a href="RendaFixa/renda-fixa.html" class="btn">Saiba Mais</a>
+      </div>
+  </section>
+
+  <section class="simulador" id="simulador">
+    <h2>Simulador de Investimento</h2>
+
+    <form class="form-simulador">
+      <input type="number" id="valor" placeholder="Valor inicial (R$)">
+      <input type="number" id="taxa" placeholder="Taxa mensal (%)">
+      <input type="number" id="tempo" placeholder="Tempo (meses)">
+
+      <button type="button" onclick="calcular()">Simular</button>
+    </form>
+
+    <div class="resultado">
+      <p>O resultado aparecerá aqui</p>
+    </div>
+
+    <!-- 👇 ÁREA DO GRÁFICO -->
+    <div class="grafico-container">
+      <h3>Evolução do investimento</h3>
+
+      <!-- espaço onde o JS vai colocar o gráfico -->
+      <canvas id="grafico"></canvas>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-texto">
+        <h2>Comece a investir hoje mesmo</h2>
+        <p>Receba dicas e conteúdos exclusivos sobre economia e investimentos.</p>
+
+        <button id="btn-cta">Quero Saber Mais</button>
+    </div>
+
+    <div id="formulario" class="formulario">
+        <h3>Deixe seu contato</h3>
+
+        <input type="text" placeholder="Seu nome" minlength="3">
+
+        <input type="tel" placeholder="Seu celular" maxlength="11">
+
+        <button id="btn-enviar">Enviar</button>
+    </div>
+</section>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>InvestSmart</h3>
+        <p>Aprenda economia e investimentos de forma simples e prática.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#economia">Economia</a></li>
+          <li><a href="#economia">Investimentos</a></li>
+          <li><a href="#simulador">Simulador</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <p>Email: contato@investsmart.com</p>
+        <p>Telefone: (11) 99999-9999</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 InvestSmart - Todos os direitos reservados</p>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</html>
