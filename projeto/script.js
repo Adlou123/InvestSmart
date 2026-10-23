@@ -2,22 +2,23 @@ let grafico;
 
 function calcular() {
   const valor = parseFloat(document.getElementById("valor").value);
+  const valormes = parseFloat(document.getElementById("valormes").value);
   const taxa = parseFloat(document.getElementById("taxa").value) / 100;
-  const tempo = parseInt(document.getElementById("tempo").value);
+  tempo = parseInt(document.getElementById("tempo").value);
 
-  const resultado = document.querySelector(".resultado p");
+  resultado = document.querySelector(".resultado p");
 
   if (isNaN(valor) || isNaN(taxa) || isNaN(tempo)) {
     resultado.innerText = "Preencha todos os campos!";
     return;
   }
-
   let montante = valor;
   let valores = [valor];
   let labels = ["0"];
 
   for (let i = 1; i <= tempo; i++) {
     montante = montante * (1 + taxa);
+    montante = montante + valormes;
     valores.push(montante);
     labels.push(i.toString());
   }
