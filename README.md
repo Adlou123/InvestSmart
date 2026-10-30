@@ -6,3 +6,4 @@
   #Quando efetua se o login ele nao volta para index.html taopouco realiza o mesmo no index.html
   #O navbar tem o li designado para o inicio mesmo que funcional não faz sentido, sugiro que o navbar acompanhe ao descer a pagina
   #O navbar tem o li designado para o contato deve ser implementado mais coisa
+  #Adicionar um aviso na area do simulador o avisando que o calculo do mesmo desconsidera os imposto e é apenas o calculo do valor bruto
