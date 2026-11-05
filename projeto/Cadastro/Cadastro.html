@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+
+    <form class="cadastro">
+
+        <label for="tipo-cadastro">Tipo de cadastro</label>
+        <select id="tipo-cadastro" name="tipoCadastro">
+            <option value="usuario">Usuário</option>
+            <option value="administrador">Administrador</option>
+        </select>
+
+        <input class="nome" type="text"
+               name="nome" placeholder="Nome"
+               autocomplete="name" required>
+        <br>
+
+        <input class="email" type="email"
+               name="email" placeholder="E-mail"
+               autocomplete="email" required>
+        <br>
+
+        <input class="cpf" type="text"
+               name="cpf" placeholder="CPF"
+               maxlength="11" pattern="[0-9]{11}"
+               required>
+        <br>
+
+        <div id="campos-endereco">
+            <input id="cep" class="cep" type="text"
+                   name="cep" placeholder="CEP"
+                   maxlength="9"
+                   onblur="pesquisacep(this.value);"
+                   required>
+            <br>
+
+            <input id="rua" class="endereco" type="text"
+                   name="rua" placeholder="Endereço" required>
+            <br>
+
+            <input id="bairro" class="bairro" type="text"
+                   name="bairro" placeholder="Bairro" required>
+            <br>
+
+            <input id="cidade" class="cidade" type="text"
+                   name="cidade" placeholder="Cidade" required>
+            <br>
+
+            <input id="uf" class="uf" type="text"
+                   name="uf" placeholder="UF"
+                   maxlength="2" required>
+            <br>
+        </div>
+
+        <input class="senha" type="password"
+               name="senha" placeholder="Senha"
+               minlength="8" autocomplete="new-password"
+               required>
+        <br>
+
+        <input class="confirmacao" type="password"
+               name="confirmacao" placeholder="Confirmar Senha"
+               minlength="8" autocomplete="new-password"
+               required>
+        <br>
+
+        <button class="BTNcadastro" type="submit">
+            Cadastrar-se
+        </button>
+
+        <button type="button"
+                onclick="window.location.href='../Login/Login.html'">
+            Voltar
+        </button>
+
+    </form>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>InvestSmart</h3>
+                <p>Aprenda economia e investimentos de forma simples e prática.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../index.html#economia">Economia</a></li>
+                    <li><a href="../index.html#investimento">Investimentos</a></li>
+                    <li><a href="../index.html#simulador">Simulador</a></li>
+                    <li><a href="../index.html#anotacoes">Minhas anotações</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 InvestSmart - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="Cadastro.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="stylesheet" href="paginaprin.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InvestSmart</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">InvestSmart</div>
+
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#economia">Economia</a></li>
+        <li><a href="#investimento">Investimento</a></li>
+        <li><a href="#simulador">Simulador</a></li>
+        <li><a href="#anotacoes">Minhas anotações</a></li>
+      </ul>
+
+      <span class="usuario-nome" id="usuario-nome" hidden></span>
+      <a class="btn" id="botao-login" href="Login/Login.html">Login</a>
+      <button class="btn" id="botao-sair" type="button" hidden>Sair</button>
+    </nav>
+  </header>
+  <section class="banner">
+
+    <div class="texto">
+      <h1>Aprenda a cuidar do seu dinheiro.</h1>
+
+      <p>Dicas simples e práticas sobre economia e investimentos para iniciantes.</p>
+
+      <a href="saibaMais/saibaMais.html" class="btn">Saiba Mais</a>
+    </div>
+
+    <div class="imagem">
+      <img src="imagens/imagembanner.png" alt="Imagem de economia">
+    </div>
+  </section>
+  <section class="economia" id="economia">
+    <h2>O que é economia?</h2>
+
+    <p class="intro">
+      Economia é o estudo de como as pessoas usam o dinheiro e os recursos para
+      produzir, consumir e investir de forma inteligente.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>📈 Crescimento</h3>
+        <p>Entenda como a economia afeta o crescimento econômico.</p>
+        <a href="Crescimento/crescimento.html" class="btn">Saiba Mais</a>
+      </div>
+
+      <div class="card">
+        <h3>💲 Criptomoedas</h3>
+        <p>invista em moedas digitais como bitcoin e ethereum.</p>
+        <a href="CriptoMoedas/criptomoedas.html" class="btn">Saiba Mais</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="investimento" id="investimento">
+    <h2>Investimento</h2>
+    <p class="intro">
+      Conheça diferentes formas de investir, entenda os riscos e aprenda conceitos importantes antes de tomar decisões.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>📊 Renda variável</h3>
+        <p>Conheça investimentos como ações e fundos, cujos resultados podem variar conforme o mercado.</p>
+        <a href="RendaVariavel/renda-variavel.html" class="btn">Saiba Mais</a>
+      </div>
+
+      <div class="card">
+        <h3>💰 Renda fixa</h3>
+        <p>Explore opções como poupança, Tesouro Direto e CDBs e conheça suas características.</p>
+        <a href="RendaFixa/renda-fixa.html" class="btn">Saiba Mais</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="simulador" id="simulador">
+    <h2>Simulador de Investimento</h2>
+    <p class="aviso-simulador">
+      Aviso: o simulador não desconta impostos ou outras cobranças. Os valores e o gráfico representam apenas o valor bruto estimado.
+    </p>
+
+    <form class="form-simulador">
+      <input type="number" id="valor" placeholder="Valor inicial (R$)" aria-label="Valor inicial" min="0" step="any" required>
+      <input type="number" id="valormes" placeholder="Valor por mês (R$)" aria-label="Valor por mês" min="0" step="any" required>
+      <input type="number" id="taxa" placeholder="Taxa mensal (%)" aria-label="Taxa mensal" min="-99.99" step="any" required>
+      <input type="number" id="tempo" placeholder="Tempo (meses)" aria-label="Tempo em meses" min="1" step="1" required>
+
+      <button type="submit">Simular</button>
+    </form>
+
+    <div class="resultado" aria-live="polite">
+      <p>O resultado aparecerá aqui</p>
+    </div>
+
+    <div class="grafico-container">
+      <h3>Evolução do investimento</h3>
+      <canvas id="grafico"></canvas>
+    </div>
+  </section>
+
+  <section class="anotacoes" id="anotacoes">
+    <h2>Minhas anotações de investimento</h2>
+    <p class="intro">Faça uma simulação e registre suas observações para consultar depois.</p>
+
+    <form class="form-anotacao" id="form-anotacao">
+      <label for="anotacao-titulo">Investimento ou objetivo</label>
+      <input id="anotacao-titulo" type="text" placeholder="Ex.: Reserva de emergência" maxlength="80" required>
+
+      <label for="anotacao-texto">Anotações sobre a simulação</label>
+      <textarea id="anotacao-texto" rows="4" placeholder="Escreva suas observações, dúvidas ou próximos passos..." required></textarea>
+
+      <button type="submit">Salvar anotação da simulação</button>
+      <p class="mensagem-anotacao" id="mensagem-anotacao" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="lista-anotacoes" id="lista-anotacoes" aria-live="polite"></div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-col">
+        <h3>InvestSmart</h3>
+        <p>Aprenda economia e investimentos de forma simples e prática.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#economia">Economia</a></li>
+          <li><a href="#investimento">Investimento</a></li>
+          <li><a href="#simulador">Simulador</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 InvestSmart - Todos os direitos reservados</p>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</html>

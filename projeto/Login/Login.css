@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7fc;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #00498c;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+.login {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+
+    padding: 30px;
+    border-radius: 10px;
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    margin-bottom: 12px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.login p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.login a {
+    color: #00498c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background: #0f172a;
+    color: white;
+
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col {
+    max-width: 300px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: #22c55e;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+
+    border-top: 1px solid #1e293b;
+    padding-top: 15px;
+
+    font-size: 14px;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .login {
+        max-width: 90%;
+    }
+
+}
+}
