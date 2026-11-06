@@ -1,70 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>InvestSmart · Administração</title>
-<link rel="stylesheet" href="adm.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InvestSmart · Administração</title>
+  <link rel="stylesheet" href="adm.css">
 </head>
+
 <body>
-<aside>
-  <h1>InvestSmart</h1><small>Painel do administrador</small>
-  <button class="on" data-tab="geral">Visão geral</button>
-  <button data-tab="usuarios">Cadastro local</button>
-  <button data-tab="simulacoes">Simulações</button>
-  <button data-tab="conteudo">Conteúdo do site</button>
-  <a href="../index.html">Ver site</a>
-</aside>
+  <aside>
+    <h1>InvestSmart</h1><small>Painel do administrador</small>
+    <button class="on" data-tab="geral">Visão geral</button>
+    <button data-tab="usuarios">Cadastro local</button>
+    <button data-tab="simulacoes">Simulações</button>
+    <button data-tab="conteudo">Conteúdo do site</button>
+    <a href="../index.html">Ver site</a>
+  </aside>
 
-<main>
-  <div class="hint">
-    Este painel mostra apenas dados guardados neste navegador. O site não tem backend nem autenticação administrativa: não é possível ver usuários de outros dispositivos, saber quem está online ou acompanhar simulações que não foram salvas em uma anotação. As alterações de conteúdo também ficam somente neste navegador.
-  </div>
-  <div class="hint erro-dados" id="status-dados" role="alert" hidden></div>
-
-  <!-- VISÃO GERAL -->
-  <section id="geral" class="on">
-    <h2>Visão geral</h2>
-    <div class="stats">
-      <div class="stat"><b id="s-users">0</b><span>Cadastro(s) neste navegador</span></div>
-      <div class="stat"><b id="s-sims">0</b><span>Simulações registradas em anotações locais</span></div>
-      <div class="stat"><b id="s-media">—</b><span>Média dos resultados brutos registrados</span></div>
+  <main>
+    <div class="hint">
+      Este painel mostra apenas dados guardados neste navegador. O site não tem backend nem autenticação administrativa:
+      não é possível ver usuários de outros dispositivos, saber quem está online ou acompanhar simulações que não foram
+      salvas em uma anotação. As alterações de conteúdo também ficam somente neste navegador.
     </div>
-    <div class="panel"><h3>Registros de simulação</h3><div id="barras"></div></div>
-    <div class="panel"><h3>Últimas simulações registradas</h3><div id="ultimas"></div></div>
-  </section>
+    <div class="hint erro-dados" id="status-dados" role="alert" hidden></div>
 
-  <!-- USUÁRIOS -->
-  <section id="usuarios">
-    <h2>Cadastro local</h2>
-    <p class="section-description">O formulário atual salva um único cadastro no armazenamento deste navegador. O site não registra sessão ou último acesso.</p>
-    <div class="panel"><table>
-      <thead><tr><th>Nome</th><th>E-mail</th><th>Ações</th></tr></thead>
-      <tbody id="tb-users"></tbody>
-    </table></div>
-  </section>
+    <!-- VISÃO GERAL -->
+    <section id="geral" class="on">
+      <h2>Visão geral</h2>
+      <div class="stats">
+        <div class="stat"><b id="s-users">0</b><span>Cadastro(s) neste navegador</span></div>
+        <div class="stat"><b id="s-sims">0</b><span>Simulações registradas em anotações locais</span></div>
+        <div class="stat"><b id="s-media">—</b><span>Média dos resultados brutos registrados</span></div>
+      </div>
+      <div class="panel">
+        <h3>Registros de simulação</h3>
+        <div id="barras"></div>
+      </div>
+      <div class="panel">
+        <h3>Últimas simulações registradas</h3>
+        <div id="ultimas"></div>
+      </div>
+    </section>
 
-  <!-- SIMULAÇÕES -->
-  <section id="simulacoes">
-    <h2>Simulações registradas</h2>
-    <p class="section-description">A lista contém somente simulações incluídas em anotações salvas neste navegador; cálculos feitos sem salvar uma anotação não ficam registrados. Os resultados são brutos, sem desconto de impostos.</p>
-    <div class="panel"><table>
-      <thead><tr><th>Data da anotação</th><th>Objetivo</th><th>Inicial</th><th>Mensal</th><th>Taxa</th><th>Meses</th><th>Resultado bruto</th><th></th></tr></thead>
-      <tbody id="tb-sims"></tbody>
-    </table></div>
-  </section>
+    <!-- USUÁRIOS -->
+    <section id="usuarios">
+      <h2>Cadastro local</h2>
+      <p class="section-description">O formulário atual salva um único cadastro no armazenamento deste navegador. O site
+        não registra sessão ou último acesso.</p>
+      <div class="panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tb-users"></tbody>
+        </table>
+      </div>
+    </section>
 
-  <!-- CONTEÚDO -->
-  <section id="conteudo">
-    <h2>Conteúdo do site</h2>
-    <div class="panel">
-      <h3>Textos da página inicial</h3>
-      <div id="campos"></div>
-      <button class="primary" id="salvar-conteudo">Salvar neste navegador</button><span class="msg" id="msg-conteudo" role="status" aria-live="polite"></span>
-    </div>
-  </section>
-</main>
+    <!-- SIMULAÇÕES -->
+    <section id="simulacoes">
+      <h2>Simulações registradas</h2>
+      <p class="section-description">A lista contém somente simulações incluídas em anotações salvas neste navegador;
+        cálculos feitos sem salvar uma anotação não ficam registrados. Os resultados são brutos, sem desconto de
+        impostos.</p>
+      <div class="panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Data da anotação</th>
+              <th>Objetivo</th>
+              <th>Inicial</th>
+              <th>Mensal</th>
+              <th>Taxa</th>
+              <th>Meses</th>
+              <th>Resultado bruto</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tb-sims"></tbody>
+        </table>
+      </div>
+    </section>
 
-<script src="adm.js"></script>
+    <!-- CONTEÚDO -->
+    <section id="conteudo">
+      <h2>Conteúdo do site</h2>
+      <div class="panel">
+        <h3>Textos da página inicial</h3>
+        <div id="campos"></div>
+        <button class="primary" id="salvar-conteudo">Salvar neste navegador</button><span class="msg" id="msg-conteudo"
+          role="status" aria-live="polite"></span>
+      </section>
+
+        <!-- CADASTRO DE NOVAS CONTAS ADM -->
+         <section id="cadastroADM">
+        <form class="cadastroADM">
+          <input class="email" type="email" name="email" placeholder="E-mail" autocomplete="email" required>
+          <br>
+          <input class="senha" type="password" name="senha" placeholder="Senha" minlength="8"
+            autocomplete="new-password" required>
+          <br>
+
+          <input class="confirmacao" type="password" name="confirmacao" placeholder="Confirmar Senha" minlength="8"
+            autocomplete="new-password" required>
+          <br>
+
+          <button class="BTNcadastro" type="submit">
+            Cadastrar novo ADM
+          </button>
+
+
+      </div>
+    </section>
+  </main>
+
+  <script src="adm.js"></script>
 </body>
+
 </html>
