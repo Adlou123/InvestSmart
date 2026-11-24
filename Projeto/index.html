@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="paginaprin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestSmart</title>
+</head>
+<body>
+    <header>
+  <nav class="navbar">
+    <div class="logo">InvestSmart</div>
+
+    <ul class="menu">
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Economia</a></li>
+      <li><a href="#">Investimentos</a></li>
+      <li><a href="#">Simulador</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+
+    <button class="btn">Começar</button>
+  </nav>
+</header>
+<section class="banner">
+    
+    <div class="texto">
+        <h1>Aprenda a cuidar do seu dinheiro.</h1>
+
+        <p>Dicas simples e práticas sobre economia e investimentos para iniciantes.</p>
+
+        <button class="btn">Saiba Mais</button>
+    </div>
+
+    <div class="imagem">
+        <img src="imagens/imagembanner.png" alt="Imagem de economia">
+    </div>
+</section>
+<section class="economia">
+  <h2>O que é economia?</h2>
+
+  <p class="intro">
+    Economia é o estudo de como as pessoas usam o dinheiro e os recursos para
+    produzir, consumir e investir de forma inteligente.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>📈 Crescimento</h3>
+      <p>Entenda como a economia afeta o crescimento econômico.</p>
+      <button class="btn">Saiba Mais</button>
+    </div>
+
+    <div class="card">
+      <h3>📊 Renda variável</h3>
+      <p>Opções como ações e fundos de investimento.</p>
+      <button class="btn">Saiba Mais</button> 
+    </div>
+
+    <div class="card">
+      <h3>💲 Criptomoedas</h3>
+      <p>invista em moedas digitais como bitcoin e ethereum.</p>
+      <button class="btn">Saiba Mais</button>
+    </div>
+
+    <div class="card">
+      <h3>💰 Renda fixa</h3>
+      <p>Opções como poupança, tesouro direto e CDBs.</p>
+      <button class="btn">Saiba Mais</button>
+  </div>
+</section>
+
+<section class="simulador">
+  <h2>Simulador de Investimento</h2>
+
+  <form class="form-simulador">
+    <input type="number" id="valor" placeholder="Valor inicial (R$)">
+    <input type="number" id="taxa" placeholder="Taxa mensal (%)">
+    <input type="number" id="tempo" placeholder="Tempo (meses)">
+
+    <button type="button" onclick="calcular()">Simular</button>
+  </form>
+
+  <div class="resultado">
+    <p>O resultado aparecerá aqui</p>
+  </div>
+
+  <!-- 👇 ÁREA DO GRÁFICO -->
+  <div class="grafico-container">
+    <h3>Evolução do investimento</h3>
+
+    <!-- espaço onde o JS vai colocar o gráfico -->
+    <canvas id="grafico"></canvas>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Comece a investir hoje mesmo</h2>
+  <p>Pequenas decisões hoje podem gerar grandes resultados no futuro.</p>
+  <button>Começar agora</button>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>InvestSmart</h3>
+      <p>Aprenda economia e investimentos de forma simples e prática.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Links</h4>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Economia</a></li>
+        <li><a href="#">Investimentos</a></li>
+        <li><a href="#">Simulador</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <p>Email: contato@investsmart.com</p>
+      <p>Telefone: (11) 99999-9999</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 InvestSmart - Todos os direitos reservados</p>
+  </div>
+</footer>
+</html>
